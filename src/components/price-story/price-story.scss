@@ -1,0 +1,369 @@
+// make font family tokens for price-story
+.kds {
+	.kds-price-story {
+		display: flex;
+
+		&.right {
+			justify-content: flex-end;
+		}
+
+		&.left {
+			justify-content: flex-start;
+		}
+
+		.info-icon {
+			flex-grow: 0;
+			display: inline-block;
+			min-width: $size-icon-price-story-info-icon-min-width;
+			height: $size-icon-price-story-info-icon-height;
+			margin-right: $size-margin-price-story-info-icon-margin-right;
+			background-image: url($assetsBaseUrl + "/icons/price-story/info-circle-icon.svg");
+			background-repeat: no-repeat;
+			background-position-x: center;
+			background-position-y: center;
+			background-size: contain;
+			background-origin: content-box;
+			cursor: pointer;
+		}
+
+		.your-price,
+		.coupon-code {
+			color: $color-text-price-story-your-price;
+		}
+
+		.regular-sale-container {
+			display: flex;
+		}
+
+		// MOBILE
+		&.mobile {
+			font-size: $size-text-price-story-mobile;
+
+			.regular-container,
+			.sale-price-container {
+				display: flex;
+			}
+
+			&.left.vertical {
+				.regular-container,
+				.sale-container {
+					flex-direction: row-reverse;
+					justify-content: flex-end;
+				}
+
+				.regular-container.dominant {
+					flex-direction: column;
+					justify-content: flex-start;
+					align-items: baseline;
+				}
+
+				.sale-price-container {
+					flex-direction: column;
+				}
+			}
+
+			&.right.vertical {
+				.sale-price-container {
+					align-items: flex-end;
+					flex-direction: column;
+				}
+
+				.regular-container {
+					flex-direction: row;
+				}
+
+				.regular-container.dominant {
+					flex-direction: column;
+					align-items: flex-end;
+				}
+			}
+
+			&.left.horizontal {
+				.regular-container.dominant {
+					flex-direction: row;
+					justify-items: flex-start;
+					align-items: baseline;
+				}
+
+				.sale-price-container {
+					flex-direction: row;
+					justify-items: flex-start;
+					align-items: baseline;
+					flex-wrap: wrap;
+				}
+			}
+
+			&.right.horizontal {
+				.regular-container.dominant {
+					flex-direction: row;
+					align-items: baseline;
+				}
+
+				.sale-price-container {
+					justify-items: flex-end;
+					flex-direction: row;
+					align-items: baseline;
+					flex-wrap: wrap;
+				}
+			}
+
+			.dominant {
+				.regular-price,
+				.sale-price {
+					font-family: $style-text-font-family-price-story-dominant;
+				}
+
+				.regular-price-label,
+				.regular-price {
+					text-decoration: none;
+					color: $color-text-price-story-dominant-regular-label;
+				}
+			}
+
+			.sale-container {
+				color: $color-text-price-story-sale-price;
+				font-family: $style-text-font-family-price-story-dominant;
+				// text-transform: uppercase;
+				display: flex;
+				align-items: baseline;
+			}
+
+			.regular-price,
+			.regular-price-label {
+				color: $color-text-price-story-regular-price;
+				text-decoration: line-through;
+				font-family: $style-text-font-family-price-story-secondary;
+			}
+		}
+
+		// DESKTOP
+
+		&.desktop {
+			.regular-container,
+			.sale-price-container,
+			.your-price-container {
+				display: flex;
+			}
+
+			.your-price-container {
+				.your-price {
+					font-size: $size-text-price-story-dominant-price;
+					font-family: $style-text-font-family-price-story-dominant;
+				}
+			}
+
+			&.left.vertical {
+				.regular-container,
+				.sale-container {
+					flex-direction: row-reverse;
+					justify-content: flex-end;
+				}
+
+				.regular-container.dominant {
+					flex-direction: column;
+					align-items: baseline;
+				}
+
+				.sale-price-container {
+					flex-direction: column;
+				}
+			}
+
+			&.right.vertical {
+				.sale-price-container {
+					align-items: flex-end;
+					flex-direction: column;
+				}
+
+				.regular-container {
+					flex-direction: row;
+				}
+
+				.regular-container.dominant {
+					flex-direction: column;
+					align-items: flex-end;
+				}
+			}
+
+			&.left.horizontal {
+				.regular-container.dominant {
+					flex-direction: row;
+					justify-items: flex-start;
+					align-items: baseline;
+				}
+
+				.sale-price-container {
+					flex-direction: row;
+					justify-items: flex-start;
+					align-items: baseline;
+				}
+			}
+
+			&.right.horizontal {
+				.regular-container.dominant {
+					flex-direction: row;
+					align-items: baseline;
+				}
+
+				.sale-price-container {
+					flex-direction: row;
+					align-items: baseline;
+				}
+			}
+
+			.regular-price,
+			.regular-price-label {
+				font-size: 22px;
+			}
+			.sale-price-label {
+				font-size: 32px;
+			}
+
+			.dominant {
+				.regular-price,
+				.sale-price {
+					font-size: 44px;
+					font-family: $style-text-font-family-price-story-dominant;
+					line-height: 1.4;
+				}
+
+				.regular-price-label,
+				.regular-price {
+					text-decoration: none;
+					color: $color-text-price-story-dominant-regular-label;
+				}
+			}
+
+			.sale-container {
+				color: $color-text-price-story-sale-price;
+				font-family: $style-text-font-family-price-story-dominant;
+				// text-transform: uppercase;
+				display: flex;
+				align-items: baseline;
+			}
+
+			.regular-price,
+			.regular-price-label {
+				color: $color-text-price-story-regular-price;
+				text-decoration: none;
+				font-family: $style-text-font-family-price-story-secondary;
+			}
+
+			&.right {
+				// YOUR PRICE STORY
+				.all-price-container {
+					font-size: $size-text-price-story-desktop;
+					.regular-sale-container {
+						flex-direction: row;
+						justify-content: flex-end;
+
+						.sale-price-label,
+						.sale-price,
+						.regular-price,
+						.regular-price-label {
+							font-size: $size-text-price-story-desktop;
+							text-decoration: none;
+							font-family: $style-text-font-family-price-story-secondary;
+							text-transform: none;
+						}
+
+						.sale-price-label,
+						.sale-price {
+							color: $color-text-price-story-sale-price-secondary;
+						}
+
+						.sale-price {
+							margin-right: $size-margin-price-story-sale-price-margin-right;
+						}
+
+						.regular-price-label,
+						.regular-price {
+							color: $color-text-price-story-regular-price;
+						}
+					}
+
+					.your-price-container {
+						justify-content: flex-end;
+						align-items: baseline;
+
+						.your-price-label {
+							margin-left: $size-margin-price-story-your-price-label-margin-left;
+							font-family: $style-text-font-family-price-story-dominant;
+						}
+					}
+
+					.bottom-your-price {
+						display: flex;
+					}
+					.coupon-code {
+						font-family: $style-text-font-family-price-story-dominant;
+					}
+					.percentage {
+						margin-right: $size-margin-price-story-percentage-margin-right;
+					}
+				}
+			}
+
+			&.left {
+				// YOUR PRICE STORY
+				.all-price-container {
+					font-size: $size-text-price-story-desktop;
+					.regular-container,
+					.sale-container {
+						flex-direction: row;
+						justify-content: flex-end;
+						align-items: baseline;
+					}
+					.regular-sale-container {
+						flex-direction: row;
+						justify-content: flex-start;
+
+						.sale-price-label,
+						.sale-price,
+						.regular-price,
+						.regular-price-label {
+							font-size: $size-text-price-story-desktop;
+							text-decoration: none;
+							font-family: $style-text-font-family-price-story-secondary;
+							text-transform: none;
+						}
+
+						.sale-price-label,
+						.sale-price {
+							color: $color-text-price-story-sale-price-secondary;
+						}
+
+						.sale-price {
+							margin-right: $size-margin-price-story-sale-price-margin-right;
+						}
+
+						.regular-price-label,
+						.regular-price {
+							color: $color-text-price-story-regular-price;
+						}
+					}
+
+					.your-price-container {
+						justify-content: flex-start;
+						align-items: baseline;
+
+						.your-price-label {
+							margin-left: $size-margin-price-story-your-price-label-margin-left;
+							font-family: $style-text-font-family-price-story-dominant;
+						}
+					}
+
+					.bottom-your-price {
+						display: flex;
+					}
+					.coupon-code {
+						font-family: $style-text-font-family-price-story-dominant;
+					}
+					.percentage {
+						margin-right: $size-margin-price-story-percentage-margin-right;
+					}
+				}
+			}
+		}
+	}
+}
