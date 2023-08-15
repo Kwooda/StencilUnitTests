@@ -43,6 +43,10 @@ export namespace Components {
         "middle": string;
     }
 }
+export interface KdsPriceStoryCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLKdsPriceStoryElement;
+}
 declare global {
     interface HTMLComponentOneElement extends Components.ComponentOne, HTMLStencilElement {
     }
@@ -94,7 +98,7 @@ declare namespace LocalJSX {
         "bottomRightMessage"?: string;
         "couponCode"?: string;
         "infoMessage"?: string;
-        "onInfoIconEvent"?: (event: CustomEvent<any>) => void;
+        "onInfoIconEvent"?: (event: KdsPriceStoryCustomEvent<any>) => void;
         "orientation"?: string;
         "percentageOff"?: number;
         "priceData"?: string;
