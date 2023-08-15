@@ -5,9 +5,9 @@
 In a previous version of stencil...
 
 ```
-	"@stencil/core": "2.6.0",
-	"@stencil/angular-output-target": "0.0.7",
-	"@stencil/react-output-target": "0.0.12",
+	"@stencil/core": "2.22.3",
+	"@stencil/angular-output-target": "0.7.1",
+	"@stencil/react-output-target": "0.5.3",
 ```
 
 ...it was possible to run individual unit tests, using a command like:
@@ -21,9 +21,9 @@ The example above would run *only* the component-one unit tests.
 But after updating stencil...
 
 ```
-	"@stencil/angular-output-target": "0.4.0",
-	"@stencil/core": "2.14.0",
-	"@stencil/react-output-target": "0.3.1",
+	"@stencil/angular-output-target": "0.8.0",
+	"@stencil/core": "4.0.5",
+	"@stencil/react-output-target": "0.5.3",
 ```
 
 ...this ability has evaporated. Any attempt to run a single unit test results in running them all.
